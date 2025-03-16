@@ -18,18 +18,19 @@ Start the Docker containers:
 docker-compose up -d
 ```
 Wait for webserver to start (should take around ~5 minutes), you can check health status by running `docker-compose ps`
+
 Access the Airflow web interface at http://localhost:8080
+
 Login with name and password `admin`
 
 ### Set your OpenExchangeRates API key in Airflow:
 Go to Admin > Variables
+
 Set the `variable openexchangerates_api_key` with your API key
 
-
-
 ### Running DAGs
-Run the `initialize_databases` DAG manually to set up the database tables
-Turn on `generate_orders` and `transfer_orders_to_eur` DAGs
+- Run the `initialize_databases` DAG manually to set up the database tables
+- Turn on `generate_orders` and `transfer_orders_to_eur` DAGs
 
 You can check if databases get populated correctly by running the following commands:
 ```
